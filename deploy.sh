@@ -8,7 +8,7 @@ echo -e "---------docker Rm--------"
 docker rm vite-Project
 docker rmi applestven/applestven:main
 echo -e "---------docker Pull--------"
-docker pull applestven/vite-Project:main
+docker pull applestven/vite-Project:main 
 echo -e "---------docker Create and Start--------"
 docker run --rm -d -p 9000:80 --name applestven applestven/vite-Project:main
 echo -e "---------deploy Success--------"
