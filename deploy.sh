@@ -24,4 +24,4 @@ echo -e "---------deploy Success--------"
 # docker pull <docker服务器上镜像的名字>:<镜像的tag默认是github分支的名字>  		 # 注意修改
 # echo -e "---------docker Create and Start--------"
 # docker run --rm -d -p 80:80 --name <容器的名字> <docker服务器上镜像的名字>:<镜像的tag默认是github分支的名字> # 注意修改
-# echo -e "---------deploy Success--------"
+# echo -e "---------deploy Success--------" 
