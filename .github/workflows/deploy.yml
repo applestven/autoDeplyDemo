@@ -13,6 +13,7 @@ jobs:
           persist-credentials: false
       - name: Install and Build
         run: |
+          cd ./vite-Veu
           yarn install
           yarn build
       - name: Log in to Docker Hub #登陆docker
