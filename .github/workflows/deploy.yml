@@ -38,7 +38,8 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}  #上一步所拿到的tags，默认是分支名字
+          # tags: ${{ steps.meta.outputs.tags }}  #上一步所拿到的tags，默认是分支名字
+          tags: latest  # 因为dockerHub拉取为默认latest 分支  ， 拿到的tags分支名是main ，导致不能更新
           labels: ${{ steps.meta.outputs.labels }} # 上一步所拿到的labels
       # - name: Build and push
       #   uses: docker/build-push-action@v2
