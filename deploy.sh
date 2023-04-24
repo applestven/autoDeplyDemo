@@ -1,7 +1,7 @@
 ## 放在linux服务器上的文件   applestven是dockerHub用户名  $1是需要填的密码
 
 echo -e "---------docker Login--------"
-docker login -u applestven -p 779604436do
+docker login --username=$1  --password=$2 # 这个是yml文件最后一行所传递的参数，你docker的用户名和密码
 echo -e "---------docker Stop--------"
 docker stop vite-Project
 echo -e "---------docker Rm--------"
