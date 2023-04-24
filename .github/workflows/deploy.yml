@@ -38,7 +38,7 @@ jobs:
           password: ${{ secrets.TENCENT_CLOUD_PASSWORD }}
           # port: ${{ secrets.TENCENT_CLOUD_PASSWORD  }}
           script: |
-            ls
+            docker ps
             docker rm -f nodejstest
             docker pull applestven/nodejstest
             docker run -p 8181:3000 -d applestven/nodejstest
