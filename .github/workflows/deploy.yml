@@ -38,7 +38,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }} ,v1  #上一步所拿到的tags，默认是分支名字
+          tags: ${{ steps.meta.outputs.tags }}  #上一步所拿到的tags，默认是分支名字
           labels: ${{ steps.meta.outputs.labels }} # 上一步所拿到的labels
 
       # - name: Build and push
