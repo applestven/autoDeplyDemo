@@ -10,7 +10,7 @@ docker rmi applestven/applestven:latest
 echo -e "---------docker Pull--------"
 docker pull applestven/vite-project:latest 
 echo -e "---------docker Create and Start--------"
-docker run --rm -d -p 9000:80 --name applestven applestven/vite-project:latest
+docker run --rm -d -p 9000:80 --name vite-project applestven/vite-project:latest
 echo -e "---------deploy Success--------"
 
 # echo -e "---------docker Login--------"
