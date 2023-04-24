@@ -1,6 +1,7 @@
 ## 放在linux服务器上的文件   applestven是dockerHub用户名  $1是需要填的密码
+
 echo -e "---------docker Login--------"
-docker login --username=applestven  --password=779604436do
+docker login --username=applestven  -p 779604436do
 echo -e "---------docker Stop--------"
 docker stop vite-Project
 echo -e "---------docker Rm--------"
