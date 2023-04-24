@@ -6,9 +6,9 @@ echo -e "---------docker Stop--------"
 docker stop vite-Project
 echo -e "---------docker Rm--------"
 docker rm vite-Project
-docker rmi applestven/applestven:main
+docker rmi applestven/applestven:latest
 echo -e "---------docker Pull--------"
-docker pull applestven/vite-Project:main 
+docker pull applestven/vite-Project:latest 
 echo -e "---------docker Create and Start--------"
 docker run --rm -d -p 9000:80 --name applestven applestven/vite-Project:latest
 echo -e "---------deploy Success--------"
