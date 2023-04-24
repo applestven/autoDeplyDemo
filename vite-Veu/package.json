@@ -1,6 +1,7 @@
 {
   "name": "vite-Veu",
   "version": "0.0.0",
+  "homepage": "https://applestven.github.io/autoDeplyDemo",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
