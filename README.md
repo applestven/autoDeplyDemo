@@ -10,7 +10,7 @@ git push - gitAction - npm run build打包- docker login登录 -dockerhub build�
 http://43.139.236.50:9000/
 
 
-
+这里可以找到所有的 action : https://github.com/marketplace?type=actions
 
 ## 一些有价值的参考 ： 
 https://cloud.tencent.com/developer/article/2200768   SCP发布到自有服务器上 直接上传到服务器 不走docker 
