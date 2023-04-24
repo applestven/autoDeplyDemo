@@ -37,11 +37,7 @@ jobs:
           username: ${{ secrets.TENCENT_CLOUD_NAME }}
           password: ${{ secrets.TENCENT_CLOUD_PASSWORD }}
           # port: ${{ secrets.TENCENT_CLOUD_PASSWORD  }}
-          script: |
-            docker ps
-            docker rm -f nodejstest
-            docker pull applestven/nodejstest
-            docker run -p 8181:3000 -d applestven/nodejstest
+          script: cd ~ && sh deployNode.sh ${{ secrets.DOCKER_USERNAME }} ${{ secrets.DOCKER_PASSWORD }} #运行脚本
 
 
 # name: GitHub Actions Build and Deploy Demo
