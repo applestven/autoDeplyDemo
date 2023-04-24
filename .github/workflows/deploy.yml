@@ -26,7 +26,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          # file: ./koa
+          file: ./koa
           push: true
           tags: applestven/nodejstest:latest
           script: | 
@@ -40,6 +40,7 @@ jobs:
           password: ${{ secrets.REMOTE_PASSWORD }}
           port: ${{ secrets.TENCENT_CLOUD_PASSWORD  }}
           script: |
+            ls
             docker rm -f nodejstest
             docker pull applestven/nodejstest
             docker run -p 8181:3000 -d applestven/nodejstest
