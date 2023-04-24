@@ -3,7 +3,7 @@ name: node-ci
 on:
   push:
     branches:
-      - 'main'
+      - 'demoforNode'
 
 jobs:
   docker:
