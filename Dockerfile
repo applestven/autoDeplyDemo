@@ -2,7 +2,7 @@
 # COPY ./vite-Veu/dist /usr/share/nginx/html
 # EXPOSE 80
 
-FROM node:demoforNode
+FROM node:latest
  
 RUN mkdir -p /service
 WORKDIR /service
