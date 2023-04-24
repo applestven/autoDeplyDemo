@@ -7,14 +7,14 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          persist-credentials: false
       - name: Use Node.js 16
         uses: actions/setup-node@v3
         with:
-          node-version: '16.x'    
+          node-version: '16.x'
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false    
       - name: Install and Build
         run: |
           cd ./vite-Veu
