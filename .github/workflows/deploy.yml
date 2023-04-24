@@ -26,9 +26,11 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: ./koa
+          # file: ./koa
           push: true
           tags: applestven/nodejstest:latest
+          script: | 
+            ls
       - 
         name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
