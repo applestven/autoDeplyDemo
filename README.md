@@ -15,10 +15,14 @@ http://43.139.236.50:9000/
 ## 一些有价值的参考 ： 
 https://cloud.tencent.com/developer/article/2200768   SCP发布到自有服务器上 直接上传到服务器 不走docker 
 
-## gitAction 执行sh文件报错  ： 
+## 执行sh文件报错 docker 需要权限获取用户组权限  ： 
 
 服务器中设置 ： 
-查询当前用户 ： who
+查询当前用户 ： who 
 第一步：sudo gpasswd -a ubuntu docker  #将普通用户username加入到docker组中，username这个字段也可以直接换成$USER。
 
-第二步：newgrp docker  #更新docker组
+第二步：newgrp docker  #更新docker组 
+
+## 创建分支 demoforNode 
+
+用来部署 后端 node   创建镜像到 打包 以及后端更新的cicd 
