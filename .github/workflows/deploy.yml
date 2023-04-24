@@ -25,7 +25,8 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: ./koa
+          context: .
+          file: ./koa
           push: true
           tags: applestven/nodejstest:latest
       - 
