@@ -36,7 +36,7 @@ jobs:
           host: ${{ secrets.TENCENT_CLOUD_IP }}
           username: ${{ secrets.TENCENT_CLOUD_NAME }}
           password: ${{ secrets.REMOTE_PASSWORD }}
-          port: ${{ secrets.TENCENT_CLOUD_PASSWORD  }}
+          # port: ${{ secrets.TENCENT_CLOUD_PASSWORD  }}
           script: |
             ls
             docker rm -f nodejstest
