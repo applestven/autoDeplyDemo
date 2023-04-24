@@ -22,3 +22,12 @@ https://cloud.tencent.com/developer/article/2200768   SCP发布到自有服务�
 第一步：sudo gpasswd -a ubuntu docker  #将普通用户username加入到docker组中，username这个字段也可以直接换成$USER。
 
 第二步：newgrp docker  #更新docker组
+
+## deploy.sh  需要提前放在 服务器内 
+更新也必须在服务器内 
+
+持续集成部署成功  
+
+此时，保存一个demoforVite分支 ， 这个分支 完成了前端部署-  gitAction- docker的更新 - 云服务器 
+
+## 再次探索 部署后端 
