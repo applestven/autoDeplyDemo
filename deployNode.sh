@@ -5,9 +5,9 @@ echo -e "---------docker Stop--------"
 docker stop nodejstest 
 echo -e "---------docker Rm--------"
 docker rm nodejstest
-docker rmi applestven/applestven:latest
+docker rmi applestven/nodejstest:latest
 echo -e "---------docker Pull--------"
-docker pull applestven/nodejstest:latest 
+docker pull applestven/nodejstest:latest
 echo -e "---------docker Create and Start--------"
 docker run --rm -d -p 9000:80 --name nodejstest applestven/nodejstest:latest
 echo -e "---------deploy Success--------"
