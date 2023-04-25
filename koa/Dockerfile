@@ -14,4 +14,4 @@ RUN cnpm install pm2 -g
  
 EXPOSE 3000
  
-CMD [ "pm2-docker", "start", "pm2.json" ]
+CMD [ "pm2-docker", "start", "src/index.js" ]
