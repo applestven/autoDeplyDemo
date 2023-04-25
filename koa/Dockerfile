@@ -1,7 +1,8 @@
 # 基于最新版的NODE容器创建
 FROM node:latest
 RUN mkdir -p /service
-COPY ../koa /service
+COPY ./ /service
+WORKDIR /service
 RUN chmod 755 /service
 RUN npm install -g cnpm --registry=http://registry.npm.taobao.org
 RUN cnpm install
