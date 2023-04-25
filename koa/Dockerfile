@@ -1,19 +1,40 @@
-# FROM nginx
-# COPY ./vite-Veu/dist /usr/share/nginx/html
-# EXPOSE 80
-
-FROM node:8.0.0
-
+# 基于最新版的NODE容器创建
+FROM node:latest
 RUN mkdir -p /service
-WORKDIR /service
-COPY ./koa ./service
-RUN pwd 
-RUN ls
- 
+COPY koa /service
+RUN chmod 755 /service
 RUN npm config set registry https://registry.npmmirror.com/
 RUN npm install
 RUN npm install pm2 -g
- 
 EXPOSE 3000
+CMD [ "pm2", "start", "/src/main.js" ] 
+# 安装pm2的插件webshell，方便在容器外直接管理node和pm2
+# RUN npm install -g pm2@latest
+# RUN pm2 install pm2-webshell
+# RUN pm2 conf pm2-webshell:username waterchestnut
+# RUN pm2 conf pm2-webshell:password waterchestnut
+
+# 映射nodejs可执行文件的目录
+# 复制容器的执行脚本
+# COPY start /start
+
+# 容器的执行命令
+# CMD ["/start"]
+
+# 暴露端口映射
+
+# EXPOSE 443
+
+# FROM node:8.0.0
+
+# RUN mkdir -p /service
+# WORKDIR /service
+# COPY ./koa ./service
  
-CMD [ "pm2", "start", "./src/main.js" ] 
+# RUN npm config set registry https://registry.npmmirror.com/
+# RUN npm install
+# RUN npm install pm2 -g
+ 
+# EXPOSE 3000
+ 
+# CMD [ "pm2", "start", "./src/main.js" ] 
