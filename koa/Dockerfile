@@ -3,9 +3,9 @@ FROM node:latest
 RUN mkdir -p /service
 COPY koa /service
 RUN chmod 755 /service
-RUN npm config set registry https://registry.npmmirror.com/
-RUN npm install
-RUN npm install pm2 -g
+RUN npm install -g cnpm --registry=http://registry.npm.taobao.org
+RUN cnpm install
+RUN cnpm install pm2 -g
 EXPOSE 3000
 CMD [ "pm2", "start", "/src/main.js" ] 
 # 安装pm2的插件webshell，方便在容器外直接管理node和pm2
