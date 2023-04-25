@@ -8,9 +8,9 @@ RUN mkdir -p /service
 WORKDIR /service
 COPY ./koa ./service
  
-RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
-RUN cnpm install
-RUN cnpm install pm2 -g
+RUN npm config set registry https://registry.npmmirror.com/
+RUN npm install
+RUN npm install pm2 -g
  
 EXPOSE 3000
  
