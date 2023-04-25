@@ -14,4 +14,4 @@ RUN npm install pm2 -g
  
 EXPOSE 3000
  
-CMD [ "pm2", "start", "src/index.js" ] 
+CMD [ "pm2", "start", "./src/main.js" ] 
