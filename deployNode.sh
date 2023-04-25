@@ -2,7 +2,7 @@
 echo -e "---------docker Login--------"
 docker login --username=$1  --password=$2 # 这个是yml文件最后一行所传递的参数，你docker的用户名和密码
 echo -e "---------docker Stop--------"
-docker stop nodejstest
+docker stop nodejstest 
 echo -e "---------docker Rm--------"
 docker rm nodejstest
 docker rmi applestven/applestven:latest
