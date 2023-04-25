@@ -9,7 +9,7 @@ docker rmi applestven/nodejstest:latest
 echo -e "---------docker Pull--------"
 docker pull applestven/nodejstest:latest
 echo -e "---------docker Create and Start--------"
-docker run --rm -d -p 9000:80 --name nodejstest applestven/nodejstest:latest
+docker run --rm -dp 8181:80 --name nodejstest applestven/nodejstest:latest
 echo -e "---------deploy Success--------"
 
 # echo -e "---------docker Login--------"
