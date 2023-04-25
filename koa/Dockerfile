@@ -7,6 +7,8 @@ FROM node:8.0.0
 RUN mkdir -p /service
 WORKDIR /service
 COPY ./koa ./service
+RUN pwd 
+RUN ls
  
 RUN npm config set registry https://registry.npmmirror.com/
 RUN npm install

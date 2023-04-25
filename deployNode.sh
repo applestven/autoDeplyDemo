@@ -11,7 +11,6 @@ docker pull applestven/nodejstest:latest
 echo -e "---------docker Create and Start--------"
 docker run --rm -d -p 8181:3000 --name nodejstest applestven/nodejstest:latest
 echo -e "---------deploy Success--------"
-
 # echo -e "---------docker Login--------"
 # docker login --username=$1  --password=$2 # 这个是yml文件最后一行所传递的参数，你docker的用户名和密码
 # echo -e "---------docker Stop--------"
