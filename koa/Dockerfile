@@ -3,7 +3,7 @@
 # EXPOSE 80
 
 FROM node:demoforNode
- 
+
 RUN mkdir -p /service
 WORKDIR /service
 COPY ./koa ./service
