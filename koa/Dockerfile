@@ -2,12 +2,12 @@ FROM node:latest
 # 输出当前文件夹列表
 RUN pwd && ls -la
 # 添加守护进程管理工具
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    curl \
-    && curl -o /usr/local/bin/dumb-init -SL "https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_amd64" \
-    && chmod +x /usr/local/bin/dumb-init \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+# RUN apt-get update && apt-get install -y --no-install-recommends \
+#     curl \
+#     && curl -o /usr/local/bin/dumb-init -SL "https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_amd64" \
+#     && chmod +x /usr/local/bin/dumb-init \
+#     && apt-get clean \
+#     && rm -rf /var/lib/apt/lists/*
 
 # 创建工作目录
 RUN mkdir -p /service
