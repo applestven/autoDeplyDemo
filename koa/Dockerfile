@@ -2,7 +2,8 @@
 FROM node:latest
 RUN ls
 RUN mkdir -p /service
-COPY ./ /service
+ADD src /service
+ADD package.json /service
 WORKDIR /service
 RUN chmod 755 /service
 RUN pwd
