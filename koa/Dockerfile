@@ -4,6 +4,7 @@ RUN mkdir -p /service
 COPY ./ /service
 WORKDIR /service
 RUN chmod 755 /service
+RUN pwd
 RUN npm install -g cnpm --registry=http://registry.npm.taobao.org
 RUN cnpm install
 RUN cnpm install pm2 -g
