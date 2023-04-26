@@ -15,6 +15,9 @@ WORKDIR /service
 # 复制应用程序
 ADD ./ /service
 
+# 查看当前目录文件
+RUN ls
+
 # 修改权限
 RUN chmod 755 /service
 
