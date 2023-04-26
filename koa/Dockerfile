@@ -2,13 +2,12 @@ FROM node:latest
 # 输出当前文件夹列表
 RUN pwd && ls -la
 # 添加守护进程管理工具
-RUN apt-get update
-#  && apt-get install -y --no-install-recommends \
-#     curl \
-#     && curl -o /usr/local/bin/dumb-init -SL "https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_amd64" \
-#     && chmod +x /usr/local/bin/dumb-init \
-#     && apt-get clean \
-#     && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    && curl -o /usr/local/bin/dumb-init -SL "https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_amd64" \
+    && chmod +x /usr/local/bin/dumb-init \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # 创建工作目录
 RUN mkdir -p /service
@@ -30,7 +29,7 @@ EXPOSE 3000
 
 # 使用守护进程管理工具启动应用程序
 # ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
-# CMD ["pm2", "start", "./koa/src/main.js"]
+CMD ["pm2", "start", "./koa/src/main.js"]
 
 # 添加了守护进程管理工具 dumb-init，用于在容器内处理 Unix 信号和进程优雅退出。
 
