@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # 修改权限
 # RUN chmod 755 /service
-WORKDIR /koa
+# WORKDIR /koa
 # 安装依赖
 RUN npm install -g cnpm --registry=http://registry.npm.taobao.org
 RUN cnpm install
