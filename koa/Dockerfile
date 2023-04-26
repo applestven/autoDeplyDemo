@@ -18,6 +18,7 @@ ADD ./ /service
 RUN chmod 755 /service
 WORKDIR /service
 # 安装依赖
+RUN cd koa
 RUN npm install -g cnpm --registry=http://registry.npmmirror.com
 RUN cnpm install
 RUN cnpm install pm2 -g
