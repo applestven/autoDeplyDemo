@@ -10,14 +10,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # 创建工作目录
-RUN mkdir -p /service
-WORKDIR /service
+# RUN mkdir -p /service
+# WORKDIR /service
 
 # 复制应用程序
-ADD ./ /service
+# ADD ./ /service
 
 # 修改权限
-RUN chmod 755 /service
+# RUN chmod 755 /service
 
 # 安装依赖
 RUN npm install -g cnpm --registry=http://registry.npm.taobao.org
