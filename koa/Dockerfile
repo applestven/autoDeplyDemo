@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # 修改权限
 # RUN chmod 755 /service
-
+WORKDIR /koa
 # 安装依赖
 RUN npm install -g cnpm --registry=http://registry.npm.taobao.org
 RUN cnpm install
@@ -29,7 +29,7 @@ EXPOSE 3000
 
 # 使用守护进程管理工具启动应用程序
 ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
-CMD ["pm2-runtime", "start", "./src/main.js"]
+CMD ["pm2-runtime", "start", "./koa/src/main.js"]
 
 # 添加了守护进程管理工具 dumb-init，用于在容器内处理 Unix 信号和进程优雅退出。
 
