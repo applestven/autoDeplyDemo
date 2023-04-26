@@ -22,7 +22,7 @@ WORKDIR /service/koa
 RUN npm install -g cnpm --registry=http://registry.npmmirror.com
 RUN cnpm install
 RUN cnpm install pm2 -g
-# RUN pm2 start koa/src/main.js
+RUN pm2 start /service/koa/src/main.js
 
 # 暴露端口
 EXPOSE 3000
