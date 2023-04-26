@@ -21,7 +21,7 @@ RUN chmod 755 /service
 WORKDIR /service
 # 安装依赖
 # RUN npm install -g cnpm --registry=http://registry.npm.taobao.org
-RUN npm config set registry https://registry.npmmirror.com/
+RUN npm config set registry https://registry.npm.taobao.org
 RUN npm install
 RUN npm install pm2 -g
 # RUN pm2 start koa/src/main.js
