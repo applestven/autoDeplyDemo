@@ -12,7 +12,7 @@ RUN npm install -g cnpm --registry=http://registry.npm.taobao.org
 RUN cnpm install
 RUN cnpm install pm2 -g
 EXPOSE 3000
-CMD [ "pm2", "start", "./main.js" ]
+CMD [ "pm2", "start", "./koa/src/main.js" ]
 # 安装pm2的插件webshell，方便在容器外直接管理node和pm2
 # RUN npm install -g pm2@latest
 # RUN pm2 install pm2-webshell
