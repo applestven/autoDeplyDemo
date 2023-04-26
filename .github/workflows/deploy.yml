@@ -28,7 +28,7 @@ jobs:
           context: ../
           file: ./koa/Dockerfile
           push: true
-          tags: latest
+          tags: applestven/demofor-node:latest
       - 
         name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
