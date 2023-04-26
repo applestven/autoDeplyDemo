@@ -1,6 +1,4 @@
 FROM node:latest
-# 输出当前文件夹列表
-RUN pwd && ls -la
 # 添加守护进程管理工具
 # RUN apt-get update && apt-get install -y --no-install-recommends \
 #     curl \
@@ -21,7 +19,7 @@ RUN chmod 755 /service
 WORKDIR /service
 # 安装依赖
 RUN npm install -g cnpm --registry=http://registry.npm.taobao.org
-RUN npm install
+RUN cnpm install
 RUN cnpm install pm2 -g
 # RUN pm2 start koa/src/main.js
 
