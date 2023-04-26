@@ -1,5 +1,6 @@
 FROM node:latest
-
+# 输出当前文件夹列表
+RUN pwd && ls -la
 # 添加守护进程管理工具
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
@@ -13,10 +14,7 @@ RUN mkdir -p /service
 WORKDIR /service
 
 # 复制应用程序
-ADD ../ /service
-
-# 查看当前目录文件
-RUN ls
+ADD ./ /service
 
 # 修改权限
 RUN chmod 755 /service
