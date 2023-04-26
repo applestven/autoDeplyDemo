@@ -28,7 +28,7 @@ RUN cnpm install pm2 -g
 EXPOSE 3000
 
 # 使用守护进程管理工具启动应用程序
-ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
+# ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
 # CMD ["pm2", "start", "./koa/src/main.js"]
 
 # 添加了守护进程管理工具 dumb-init，用于在容器内处理 Unix 信号和进程优雅退出。
