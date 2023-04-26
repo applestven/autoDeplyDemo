@@ -13,7 +13,7 @@ RUN mkdir -p /service
 WORKDIR /service
 
 # 复制应用程序
-ADD ./ /service
+ADD ../ /service
 
 # 查看当前目录文件
 RUN ls
@@ -31,7 +31,7 @@ EXPOSE 3000
 
 # 使用守护进程管理工具启动应用程序
 ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
-CMD ["pm2-runtime", "start", "./main.js"]
+CMD ["pm2-runtime", "start", "./src/main.js"]
 
 # 添加了守护进程管理工具 dumb-init，用于在容器内处理 Unix 信号和进程优雅退出。
 
