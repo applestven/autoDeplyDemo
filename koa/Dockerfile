@@ -1,5 +1,6 @@
 # 基于最新版的NODE容器创建
 FROM node:latest
+RUN ls
 RUN mkdir -p /service
 COPY ./ /service
 WORKDIR /service
