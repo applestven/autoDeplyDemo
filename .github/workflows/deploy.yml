@@ -3,7 +3,7 @@ name: node-ci
 on:
   push:
     branches:
-      - 'demoforNode'
+      - viteAndNode
 
 jobs:
   docker:
