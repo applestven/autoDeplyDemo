@@ -19,9 +19,9 @@ RUN chmod 755 /service
 
 # 安装依赖
 WORKDIR /service/koa
-RUN npm install -g cnpm --registry=http://registry.npmmirror.com
-RUN cnpm install
-RUN cnpm install pm2 -g
+RUN npm config set registry http://registry.npmmirror.com
+RUN npm install
+RUN npm install pm2 -g
 RUN pm2 start /service/koa/src/main.js
 
 # 暴露端口
