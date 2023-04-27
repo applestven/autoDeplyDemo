@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:16.17.0
 # 添加守护进程管理工具
 # RUN apt-get update && apt-get install -y --no-install-recommends \
 #     curl \
