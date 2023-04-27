@@ -20,6 +20,7 @@ RUN chmod 755 /service
 # 安装依赖
 WORKDIR /service/koa
 RUN npm config set registry http://registry.npmmirror.com
+RUN npm install -g npm@9.6.5
 RUN npm install
 RUN npm install pm2 -g
 RUN pm2 start /service/koa/src/main.js
